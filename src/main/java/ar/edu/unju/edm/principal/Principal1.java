@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Scanner;
 //import java.util.stream.Stream;
@@ -17,8 +20,9 @@ import ar.edu.unju.edm.model.Nota;
 public class Principal1 {
 
 	public static void main(String[] args) {
-		
+//		LocalDate fecha = new LocalDate.of(01,01,2001); 
 		List<Alumno> alumnos = new ArrayList<Alumno>();
+//		alumnos.add(1, new Alumno("Martín", "Casas", 42468749,10.0,"rpoew"));
 		Scanner sc = new Scanner(System.in);
 		int op=0;
 		do {
@@ -54,9 +58,9 @@ public class Principal1 {
 					alumno.setApellido(sc.next());
 					System.out.println("Ingrese día de fecha de nacimiento: ");
 					int dia = sc.nextInt();
-					System.out.println("Ingrese día de fecha de nacimiento: ");
+					System.out.println("Ingrese mes de fecha de nacimiento: ");
 					int mes = sc.nextInt();
-					System.out.println("Ingrese día de fecha de nacimiento: ");
+					System.out.println("Ingrese año de fecha de nacimiento: ");
 					int anio = sc.nextInt();
 					LocalDate fecha = LocalDate.of(anio, mes, dia);
 					alumno.setFechaNac(fecha);
@@ -87,8 +91,33 @@ public class Principal1 {
 				
 				break;
 			case 4:
+				System.out.println("Mostrando lista de alumnos con notas");
+				for(Alumno al:alumnos) {
+					System.out.println(al.getNombre()+" "+al.getApellido()+" "+al.getNotas());
+				}
 				break;
 			case 5: 
+				System.out.println("Ingrese un curso para listar sus materias: ");
+				String cursoIngresado = sc.next();
+				
+				
+				
+				if(parquesNaturales.isEmpty()) {	
+					System.out.println("\nNo hay ningún curso cargado!");				
+				}else {	
+					System.out.println("Ingrese nombre de un urso: ");
+					String aux;
+					aux= sc.next();
+					Iterator it = parquesNaturales.keySet().iterator();
+					while(it.hasNext()) {
+						Integer key = (Integer) it.next();
+						if(parquesNaturales.get(key).getProvincia().getNombreProvincia().equalsIgnoreCase(aux)) {
+							System.out.println(parquesNaturales.get(key));
+						}
+					}
+					
+				}
+			break;
 				break;
 			case 6: System.out.println("Saliendo...");
 				break;

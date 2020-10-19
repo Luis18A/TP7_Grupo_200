@@ -11,6 +11,7 @@ public class Alumno {
 	private long dni;
 	private LocalDate fechaNac;
 	private List<Nota> notas = new ArrayList<Nota>();
+	//yo digo que acá va materia a cuenta de String
 	private String curso;
 	
 	public Alumno() {
