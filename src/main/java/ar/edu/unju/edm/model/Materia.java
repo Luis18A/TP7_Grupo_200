@@ -38,7 +38,7 @@ public class Materia {
 	}
 	@Override
 	public String toString() {
-		return "Materia [cod=" + cod + ", nombre=" + nombre + ", tipo=" + tipo + ", curso=" + curso + "]";
+		return "Materia [Código=" + cod + ", Nombre=" + nombre + ", Tipo=" + tipo + ", Curso=" + curso + "]";
 	}
 	public Materia(int cod, String nombre, String tipo, String curso) {
 		super();

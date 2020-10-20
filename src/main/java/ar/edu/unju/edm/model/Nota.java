@@ -41,7 +41,7 @@ public class Nota {
 	}
 	@Override
 	public String toString() {
-		return "Nota [orden=" + orden + ", nota=" + nota + ", fechaNota=" + fechaNota + ", materia=" + materia + "]";
+		return "Nota "+ orden + "=" + nota + ", Fecha de Nota=" + fechaNota + ", Materia=" + materia + "]";
 	}
 	public Nota(int orden, double nota, LocalDate fechaNota, Materia materia) {
 		super();
@@ -50,9 +50,6 @@ public class Nota {
 		this.fechaNota = fechaNota;
 		this.materia = materia;
 	}
-	
-	
-	
 	
 	
 	
